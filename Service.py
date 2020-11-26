@@ -11,7 +11,10 @@ class PhoneBooksAPI(Resource):
         s = self.phonebook.list()
         return jsonify(s)
     def post(self):
-        self.datakirim = request.json() or dict()
+        try:
+            self.datakirim = request.get_json()
+        except:
+            self.datakirim=dict()
         s = self.phonebook.create(self.datakirim)
         return jsonify(s)
 
@@ -22,7 +25,10 @@ class PhoneBookAPI(Resource):
         s = self.phonebook.read(id)
         return jsonify(s)
     def put(self,id):
-        info = request.json() or dict()
+        try:
+            info = request.get_json()
+        except:
+            info = dict()
         s = self.phonebook.update(id,info)
         return jsonify(s)
     def delete(self,id):
