@@ -49,5 +49,7 @@ def get_blueprint(nama):
     return app
 
 app = get_blueprint(__name__)
+
+#dipindah ke wsgi.py
 if __name__=='__main__':
     app.run(host='0.0.0.0', port=32000, debug=True)

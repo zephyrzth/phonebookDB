@@ -7,3 +7,9 @@ buatlah dulu lingkungan virtual environment
 5. jalankan dengan python Service.py
 6. lihatlah file testing.txt untuk testing
 
+Untuk deployment, docker harus terinstall terlebih dahulu
+membangun docker image
+- docker build -t my-phonebook-service:latest .
+
+menjalankan docker image menjadi docker container dengan nama PHONEBOOK
+- docker run -d -p 32000:32000 --name PHONEBOOK my-phonebook-service:latest
