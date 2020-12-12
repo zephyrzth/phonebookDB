@@ -45,12 +45,12 @@ class PhoneBook:
 if __name__=='__main__':
     pd = PhoneBook()
 #    ----------- create
-#    result = pd.create(dict(nama='royyana',alamat='ketintang',notelp='6212345'))
-#    print(result)
-#    result = pd.create(dict(nama='ibrahim',alamat='ketintang',notelp='6212341'))
-#    print(result)
-#    result = pd.create(dict(nama='Ananda', alamat='Dinoyo Sekolahan', notelp='6212345'))
-#    print(result)
+    result = pd.create(dict(nama='royyana',alamat='ketintang',notelp='6212345'))
+    print(result)
+    result = pd.create(dict(nama='ibrahim',alamat='ketintang',notelp='6212341'))
+    print(result)
+    result = pd.create(dict(nama='Ananda', alamat='Dinoyo Sekolahan', notelp='6212345'))
+    print(result)
 #    ------------ list
     print(pd.list())
 #    ------------ info

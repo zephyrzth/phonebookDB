@@ -4,6 +4,8 @@ import uuid
 import json
 from PhoneBookModel import *
 
+
+
 class PhoneBooksAPI(Resource):
     def __init__(self):
         self.phonebook = PhoneBook()
@@ -39,6 +41,12 @@ class PhoneBookAPI(Resource):
 def get_flask(name):
     app = Flask(name)
     app.secret_key = b'781231casda9871293812h3'
+    @app.after_request
+    def after_request(response):
+        response.headers.add('Access-Control-Allow-Origin', '*')
+        response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+        response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+        return response
     return app
 
 def get_blueprint(nama):
@@ -49,6 +57,7 @@ def get_blueprint(nama):
     return app
 
 app = get_blueprint(__name__)
+
 
 #dipindah ke wsgi.py
 if __name__=='__main__':
