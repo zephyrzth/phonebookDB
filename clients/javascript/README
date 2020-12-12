@@ -17,3 +17,4 @@ python3 -m http.server -b 0.0.0.0 9999 -d .
 
 * akseslah dengan browser ke http://localhost:9999
 
+telah disediakan dockerfile agar webserver dapat di jalankan dalam container, 
