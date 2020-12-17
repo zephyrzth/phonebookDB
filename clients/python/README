@@ -1,0 +1,8 @@
+*contoh ini menggunakan library requests (https://requests.readthedocs.io/en/master/user/quickstart/)
+*sebelum mengeksekusi file client1.py, library requests harus terinstall terlebih dahulu
+
+#menginstall library requests
+pip3 install -r requirements.txt
+
+#jalankan
+python3 client.py
